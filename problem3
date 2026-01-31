@@ -1,0 +1,18 @@
+s = input()
+
+maxlen = 0
+
+for i in range(len(s)):
+    rep = ""
+    for j in range(i, len(s)):
+        if s[j] not in rep:
+            rep += s[j]
+            if len(rep) > maxlen:
+                maxlen = len(rep)
+        else:
+            break
+
+if maxlen == 0:
+    print(1)
+else:
+    print(maxlen)
